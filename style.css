@@ -1,0 +1,568 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    font-family: "poppins";
+    font-size: 16px;
+
+}
+
+body {
+    background-color: black;
+
+}
+
+.main {
+    background-image: url(backgroundimg.jpg);
+    min-height: 100vh;
+    min-width: 100vw;
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    z-index: -2;
+    border-bottom: 6px solid rgb(194, 3, 3);
+
+    box-shadow: inset 0px 10px 20px 10px black, 0px 10px 10px 10px rgba(0, 0, 255, 0.422), 0px 10px 20px 10px rgba(0, 0, 255, 0.422), 0px 10px 30px 10px rgba(0, 0, 255, 0.422)
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    height: 90px;
+    width: 80vw;
+    z-index: 5;
+    top: 0px;
+
+
+}
+
+.navsign {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.navsign .sign {
+    padding: 8px 0;
+    cursor: pointer;
+    background-color: rgba(240, 0, 0, 0.904);
+    border-radius: 5px;
+
+    &:hover {
+        background-color: rgba(200, 0, 0, 0.9);
+    }
+}
+
+.sign a {
+    text-decoration: none;
+    background-color: transparent;
+    width: 90px;
+    padding: 12px 25px;
+    color: white;
+}
+
+.lang {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px double white;
+    background-color: rgba(14, 13, 13, 0.699);
+    padding: 5px 20px;
+    gap: 10px;
+    border-radius: 6px;
+
+    &:hover {
+        border: 2px solid white;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .sign {
+        padding: 5px px;
+        border: 1px solid rgba(255, 0, 0, 0.9);
+        background-color: rgba(255, 0, 0, 0.9);
+        border-radius: 3px;
+        font-size: 0.7rem;
+        display: flex;
+        gap: 3px;
+    }
+
+    .sign span {
+        font-size: 0.7rem;
+    }
+
+    .navbar {
+        width: 40vw;
+
+        left: 0px;
+    }
+
+    img {
+        height: 50px;
+    }
+
+    .lang {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 2px solid white;
+        padding: 2px 10px;
+        gap: 10px;
+        border-radius: 3px;
+        font-size: 1rem;
+    }
+
+}
+
+img {
+    z-index: 10;
+    filter: contrast(2);
+    opacity: 0.9;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+
+.line1 {
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+
+}
+
+.line2 {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.line3 {
+    font-size: 16px;
+    margin-top: 30px;
+    font-weight: 400;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 15px;
+}
+
+.infoinput {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.infoinput .label {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    transition: 0.3s;
+    color: #a1a0aa;
+}
+
+.inputfl:focus~.label,
+.inputfl:valid~.label {
+    position: absolute;
+    top: 6px;
+    left: 30px;
+    font-size: 12px;
+    color: #a1a0aacc;
+    font-weight: 400;
+}
+
+.infoinput input {
+    padding: 0 0 0 25px;
+    height: 60px;
+    width: 430px;
+    accent-color: white;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 6px;
+    opacity: 0.5;
+    border: 3px solid white;
+    background-color: rgb(29, 26, 26);
+    color: white;
+
+
+}
+
+.info button {
+    background-color: rgb(219, 0, 0);
+    color: white;
+    cursor: pointer;
+    padding: 0 8px;
+    height: 66px;
+    width: 210px;
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+
+    &:hover {
+        background-color: rgb(161, 0, 0);
+    }
+}
+/* main{
+    /* height: 100vh;
+    width: 100vw; */
+
+.mainlines {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    margin-left: 120px;
+}
+
+.mainline1 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    gap: 20px;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-left: 125px;
+}
+
+.drop {
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: 6px 20px 6px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.040);
+}
+
+.drop svg {
+    margin-left: 25px;
+}
+
+.flexcontainer {
+    position: relative;
+    /* left: 20%; */
+    margin: 0 auto;
+    width: 1000px;
+    height: 290px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    gap: 40px;
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.flexitem {
+    position: relative;
+    height: 260px;
+    cursor: pointer;
+    scroll-snap-align: end;
+}
+
+.flexnum {
+    font-size: 120px;
+    font-weight: 600;
+    color: white;
+    position: absolute;
+    bottom: -15px;
+    left: -23px;
+    z-index: 10;
+    filter: drop-shadow(0 10px 10px black);
+}
+
+.flexitem:nth-child(1) .flexnum::after {
+    content: "1";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(2) .flexnum::after {
+    content: "2";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(3) .flexnum::after {
+    content: "3";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(4) .flexnum::after {
+    content: "4";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(5) .flexnum::after {
+    content: "5";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(6) .flexnum::after {
+    content: "6";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(7) .flexnum::after {
+    content: "7";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(8) .flexnum::after {
+    content: "8";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(9) .flexnum::after {
+    content: "9";
+    font-size: 120px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.flexitem:nth-child(10) .flexnum::after {
+    content: "10";
+    font-size: 125px;
+    font-weight: 700;
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    left: 1px;
+    z-index: 8;
+}
+
+.fleximg img {
+    height: 260px;
+    width: 180px;
+    border-radius: 10px;
+    filter: saturate(1);
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.cardbox {
+    height: 42vh;
+    width: 80vw;
+    border-radius: 5px;
+    margin: 100px auto;
+}
+.cardbox .heading {
+    width: 100%;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+.heading h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+.flexcard-cont {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+.flexcard {
+    border-radius: 20px;
+    background: linear-gradient(160deg, #192145, #1a1e3e, #1d1931, #1e162a, #1e1325, #210f19);
+    height: 100%;
+    width: 50%;
+    padding: 20px;
+    position: relative;
+    filter: saturate(1.5);
+}
+.flexcard .cardline1 h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+.flexcard .cardline2 {
+    padding: 10px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 30px 0 0;
+    color: #a1a0aa;
+}
+.flexcard .cardsvg {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.questions-box {
+    width: 100vw;
+    height: 99vh;
+    gap: 30px;
+    margin-top: 200px;
+}
+.frequestion {
+    margin: 15px auto;
+    width: 80%;
+    position: relative;
+    left: 13px;
+}
+.questionbank {
+    height: 100%;
+    width: 78%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px auto;
+}
+.question {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    height: 10%;
+    width: 98%;
+    padding: 5px 20px;
+    background-color: #2d2d2d;
+}
+.questiontext {
+    font-size: 1.5rem;
+}
+.questionsvg svg{
+    cursor: pointer;
+}
+.infoline1 {
+    margin: 0px auto 0px auto;
+    width: 80vw;
+    text-align: center;
+}
+.info2 {
+    margin: 15px auto;
+}
+.infoinput .inputfl {
+    width: 600px;
+    height: 56px;
+    color: white;
+}
+.info .infobutton {
+    height: 62px;
+}
+footer {
+    margin-top: 50px;
+    width: 100vw;
+    background-color: black;
+}
+.gridcontainer {
+    margin: 10px auto;
+    padding-left: 30px;
+    box-sizing: border-box;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(4, 0.5fr);
+    grid-template-rows: 11% repeat(4, 0.08fr) 0.2fr 0.1fr;
+}
+.gridcontainer .lastext {
+    color: #b3b3b3;
+    grid-row: 7;
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+.gridcontainer a {
+    color: #b3b3b3;
+    font-size: 0.9em;
+}
+.helpnumber {
+    grid-column: 1/5;
+    color: #b3b3b3;
+    font-size: 16px;
+}
+.langlast {
+    grid-row: 6;
+    background-color: rgba(24, 23, 23, 0.753);
+    height: 18%;
+    width: 32%;
+    margin-top: 40px;
+}
